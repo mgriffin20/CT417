@@ -78,6 +78,6 @@ public class CourseProgramme {
             moduleInfo += module.toString();
         }
 
-        return "Course: " + courseName + " \nModules:\n" + moduleInfo + "\nStart date: " + dtf.print(startDate) + "\nEnd date: " + dtf.print(endDate) + "\n";
+        return "Course: " + courseName + " \nModules: " + moduleInfo + "\nStart date: " + dtf.print(startDate) + "\nEnd date: " + dtf.print(endDate) + "\n";
     }
 }

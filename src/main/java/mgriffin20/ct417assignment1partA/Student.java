@@ -66,7 +66,8 @@ public class Student {
 	public String getUsername() {
 		return name+ " " + age;
 	}
-
+        
+        @Override
 	public String toString() {
 		return "Student: " + name + ", " + age +", " + dtf.print(dob) +", " + id + "\n";
 	}

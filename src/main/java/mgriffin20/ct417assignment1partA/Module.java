@@ -65,7 +65,7 @@ public class Module {
             }
         }
 
-        return moduleName + ", " + moduleID + ", \n" + studentsInfo;
+        return "\n" + moduleName + ", " + moduleID + "\n" + studentsInfo;
     }
 
 }

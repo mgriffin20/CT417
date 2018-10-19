@@ -17,6 +17,8 @@ import org.joda.time.format.DateTimeFormatter;
 public class Student {
 	private String name, age, id;
 	private DateTime dob;
+        private DateTimeFormatter dtf = DateTimeFormat.forPattern("dd/mm/yyyy");
+
 	
 	public Student() {
 		
@@ -66,6 +68,6 @@ public class Student {
 	}
 
 	public String toString() {
-		return "Student info:" + name + "," + age +"," + dob +"," + id +"\n";
+		return "Student: " + name + ", " + age +", " + dtf.print(dob) +"," + id +"\n";
 	}
 }

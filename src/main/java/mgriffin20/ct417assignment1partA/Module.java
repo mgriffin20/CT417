@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mgriffin20.ct417assignment1partA;
 
 import java.util.Iterator;
@@ -18,7 +13,6 @@ public class Module {
     private List<Student> studentList;
 
     public Module() {
-
     }
 
     public Module(String moduleName, String moduleID, List<Student> studentList) {
@@ -54,7 +48,8 @@ public class Module {
     public void setStudentList(List<Student> studentList) {
         this.studentList = studentList;
     }
-
+    
+    @Override
     public String toString() {
 
         String studentsInfo = "";
@@ -64,8 +59,7 @@ public class Module {
                 studentsInfo += student.toString();
             }
         }
-
         return moduleName + ", " + moduleID + "\n" + studentsInfo + "\n";
     }
-
+    
 }

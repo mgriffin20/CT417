@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mgriffin20.ct417assignment1partA;
 
 import java.util.Iterator;
 import java.util.List;
-import org.joda.time.*;
+import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
@@ -22,9 +17,7 @@ public class CourseProgramme {
     private DateTime startDate, endDate;
     private DateTimeFormatter dtf = DateTimeFormat.forPattern("dd/mm/yyyy");
 
-
     public CourseProgramme() {
-
     }
 
     public CourseProgramme(String courseName, List<Module> modules, DateTime startDate, DateTime endDate) {
@@ -70,6 +63,7 @@ public class CourseProgramme {
         this.endDate = endDate;
     }
 
+    @Override
     public String toString() {
         String moduleInfo = "";
 
@@ -78,6 +72,6 @@ public class CourseProgramme {
             moduleInfo += module.toString();
         }
 
-        return "Course: " + courseName + " \nModules: " + moduleInfo + "Start date: " + dtf.print(startDate) + "\nEnd date: " + dtf.print(endDate) + "\n";
+        return "Course: " + this.getCourseName() + " \nModules: " + moduleInfo + "Start date: " + dtf.print(this.getStartDate()) + "\nEnd date: " + dtf.print(this.getEndDate()) + "\n";
     }
 }

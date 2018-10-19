@@ -68,6 +68,6 @@ public class Student {
 	}
 
 	public String toString() {
-		return "Student: " + name + ", " + age +", " + dtf.print(dob) +"," + id +"\n";
+		return "Student: " + name + ", " + age +", " + dtf.print(dob) +", " + id + "\n";
 	}
 }

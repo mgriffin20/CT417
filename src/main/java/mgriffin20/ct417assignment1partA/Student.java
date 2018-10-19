@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mgriffin20.ct417assignment1;
+package mgriffin20.ct417assignment1partA;
 
 /**
  *
@@ -11,6 +11,8 @@ package mgriffin20.ct417assignment1;
  */
 
 import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 public class Student {
 	private String name, age, id;

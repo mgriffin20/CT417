@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mgriffin20.ct417assignment1;
+package mgriffin20.ct417assignment1partA;
 
 import java.util.Iterator;
 import java.util.List;
 import org.joda.time.*;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 /**
  *
@@ -17,7 +19,9 @@ public class CourseProgramme {
 
     private String courseName;
     private List<Module> modules;
-    private DateTime startdate, endDate;
+    private DateTime startDate, endDate;
+    private DateTimeFormatter dtf = DateTimeFormat.forPattern("dd/mm/yyyy");
+
 
     public CourseProgramme() {
 
@@ -26,7 +30,7 @@ public class CourseProgramme {
     public CourseProgramme(String courseName, List<Module> modules, DateTime startDate, DateTime endDate) {
         setCourseName(courseName);
         setModules(modules);
-        setStartdate(startDate);
+        setStartDate(startDate);
         setEndDate(endDate);
     }
 
@@ -50,12 +54,12 @@ public class CourseProgramme {
         this.modules = modules;
     }
 
-    public DateTime getStartdate() {
-        return startdate;
+    public DateTime getStartDate() {
+        return startDate;
     }
 
-    public void setStartdate(DateTime startdate) {
-        this.startdate = startdate;
+    public void setStartDate(DateTime startDate) {
+        this.startDate = startDate;
     }
 
     public DateTime getEndDate() {
@@ -74,6 +78,6 @@ public class CourseProgramme {
             moduleInfo += module.toString();
         }
 
-        return "Course: " + courseName + ", \nModules:\n" + moduleInfo + "\nStart date: " + startdate + "\nEnd date: " + endDate;
+        return "Course: " + courseName + " \nModules:\n" + moduleInfo + "\nStart date: " + dtf.print(startDate) + "\nEnd date: " + dtf.print(endDate) + "\n";
     }
 }

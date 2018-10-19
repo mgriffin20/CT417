@@ -11,7 +11,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.joda.time.DateTime;
 import static org.junit.Assert.*;
-import mgriffin20.ct417assignment1.Student;
+import mgriffin20.ct417assignment1partA.Student;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 /**
  *
@@ -21,7 +23,8 @@ public class StudentTest {
 
     @Test
     public void studentTest() {
-        DateTime birthday = new DateTime(1997, 07, 30, 21, 31, 0);
+        DateTimeFormatter dtf = DateTimeFormat.forPattern("dd/mm/yyyy");
+        DateTime birthday = dtf.parseDateTime("30/07/1997");
         Student s = new Student("Meadhbh Griffin", "21", birthday, "15366976");
         String expected = "Meadhbh Griffin 21";
         assertEquals(expected, s.getUsername());

@@ -62,6 +62,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student: " + this.getName() + ", " + this.getAge() + ", " + dtf.print(this.getDob()) + ", " + this.getId() + "\n";
+        return "Student: " + this.getName() + ", " + this.getAge() + ", " + dtf.print(this.getDob()) + ", " + this.getId() + ", " + this.getUsername() + "\n";
     }
 }
